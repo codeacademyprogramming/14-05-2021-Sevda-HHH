@@ -20,6 +20,17 @@ module.exports = {
                     "css-loader",
                     "sass-loader",]
             },
+            {
+                test: /\.html$/i,
+                loader: 'html-loader',
+            },
+            {
+                test: /\.(svg|png|jpe?g|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/[name].[hash].[ext]'
+                },
+            },
         ],
     },
 }
